@@ -4,9 +4,9 @@
 var customScripts = {
     profile: function () {
      	 var portfolio = $('#portfolio');
-		var items = $('.items', portfolio); 
-		var filters = $('.filters li a', portfolio); 
-	
+		var items = $('.items', portfolio);
+		var filters = $('.filters li a', portfolio);
+
 		items.imagesLoaded(function() {
 			items.isotope({
 				itemSelector: '.item',
@@ -14,7 +14,7 @@ var customScripts = {
 				transitionDuration: '0.7s'
 			});
 		});
-		
+
 		filters.click(function(){
 			var el = $(this);
 			filters.removeClass('active');
@@ -22,7 +22,7 @@ var customScripts = {
 			var selector = el.attr('data-filter');
 			items.isotope({ filter: selector });
 			return false;
-		});            
+		});
     },
     fancybox: function () {
         // fancybox
@@ -44,30 +44,34 @@ var customScripts = {
                    //I get fired when the animation is ending
 				if(!$('#main-nav ul li:first-child').hasClass('active')){
 					$('.header').addClass('addBg');
+                    $('.header-logo').css('height',50);
 				}else{
 						$('.header').removeClass('addBg');
+                        $('.header-logo').css('height',100);
 				}
-				
+
             },
             scrollChange: function ($currentListItem) {
                 //I get fired when you enter a section and I pass the list item of the section
 				if(!$('#main-nav ul li:first-child').hasClass('active')){
 					$('.header').addClass('addBg');
+                    $('.header-logo').css('height',50);
 				}else{
 						$('.header').removeClass('addBg');
+                        $('.header-logo').css('height',100);
 				}
 			}
         });
-		
+
 		$("a[href='#top']").click(function () {
                 $("html, body").animate({ scrollTop: 0 }, "slow");
                 return false;
             });
 			$("a[href='#basics']").click(function () {
-                $("html, body").animate({ scrollTop: $('#services').offset().top - 75 }, "slow"); 
+                $("html, body").animate({ scrollTop: $('#services').offset().top - 75 }, "slow");
                 return false;
             });
-    }, 
+    },
     owlSlider: function () {
         var owl = $("#owl-demo");
         owl.owlCarousel();
@@ -89,19 +93,19 @@ var customScripts = {
     },
 	waySlide: function(){
 		  	/* Waypoints Animations
-		   ------------------------------------------------------ */		   			  
-		 
-			 						 
+		   ------------------------------------------------------ */
+
+
 		},
-		fitText: function(){			  
-				setTimeout(function() {			
-				$('h1.responsive-headline').fitText(1.2, { minFontSize: '16px', maxFontSize: '30px' });			
+		fitText: function(){
+				setTimeout(function() {
+				$('h1.responsive-headline').fitText(1.2, { minFontSize: '16px', maxFontSize: '30px' });
 				}, 100);
 		},
     init: function () {
         customScripts.onePageNav();
         customScripts.profile();
-        customScripts.fancybox(); 
+        customScripts.fancybox();
         customScripts.owlSlider();
 		customScripts.waySlide();
 		customScripts.fitText();
