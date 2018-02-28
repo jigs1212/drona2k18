@@ -723,14 +723,14 @@ img, video, iframe, embed, object {
 	font-size: 18px;
 }
 /* --Portfolio----- */
-#work {
+#gallery {
 	background: #A43E89;
 	color: #fff;
 }
-#work h2 {
+#gallery h2 {
 	color: #fff !important;
 }
-#work p {
+#gallery p {
 	color: #fff;
 }
 #portfolio {
@@ -1304,7 +1304,7 @@ nav#filter li {
 }
 .logo{
 	/* margin:0 auto; */
-	height: 250px;
+	height: 150px;
 }
 .header-logo{
 	height: 100px;
@@ -1314,7 +1314,7 @@ nav#filter li {
 }
 #hexa16 .logo,
 #trandra .logo{
-	text-align: left;
+	float:left;
 }
 #asthra .logo,
 #oera .logo{
@@ -1322,4 +1322,15 @@ nav#filter li {
 }
 .design{
 	clear: both;
+}
+.v-a-c{
+	vertical-align: center;
+}
+.view-more-r{
+	float: right;
+	padding: 60px;
+}
+.view-more-l{
+	float: left;
+	padding: 60px 0;
 }
